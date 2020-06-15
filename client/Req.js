@@ -4,7 +4,7 @@ var Req = {
     //定时器
     timer : 0,
     
-    //发送心跳        
+    //发送心跳-
     heartBeat:function(obj) {     
         this.timer = setInterval(function () { 
             if(obj.ws.readyState == obj.ws.OPEN) {
@@ -16,6 +16,19 @@ var Req = {
             }
         },30000);         
     },
+	//发送心跳
+	heartAsk:function(obj) {
+		this.timer = setInterval(function () {
+			if(obj.ws.readyState == obj.ws.OPEN) {
+				var data = {};
+				data['time'] = (new Date()).valueOf();
+				data['data'] = '来自heartAsk的消息！';
+				obj.send(data, MainCmdID.CMD_SYS, SUB_CMD_SYS.HEART_BEAT_ASK_REQ);
+			} else {
+				clearInterval(this.timer);
+			}
+		},30000);
+	},
 
     //获取卡牌信息
     GetCard: function(obj,data) {			

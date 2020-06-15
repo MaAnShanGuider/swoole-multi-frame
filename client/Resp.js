@@ -3,37 +3,40 @@
 var Resp = {  
        
     //获取
-    getCard: function(data) {
+    getCard(data) {
         document.getElementById('msgText').innerHTML  += data + '\n';
     },
     
     //发送卡牌信息
-    sendCard: function(data) {
+    sendCard(data) {
         document.getElementById('msgText').innerHTML  += JSON.stringify(data) + '\n';			       
     },
     
     //翻牌信息
-    turnCard: function(data) {	
+    turnCard(data) {
         document.getElementById('msgText').innerHTML  += JSON.stringify(data) + '\n';	
     },
     
     //取消翻牌
-    cancelCard: function(data) {			
+    cancelCard(data) {
         document.getElementById('msgText').innerHTML  += JSON.stringify(data) + '\n';		
     },
     
     //是否翻倍
-    isDouble: function(data) {			
+    isDouble(data) {
         document.getElementById('msgText').innerHTML  += JSON.stringify(data) + '\n';		
     },
     
-    getSingerCard: function(data) {
+    getSingerCard(data) {
        document.getElementById('msgText').innerHTML  += JSON.stringify(data) + '\n';		
     },
 		
-    chatMsg: function(data) {
+    chatMsg(data) {
         console.log('-------------------------------');
         console.log(data);
        document.getElementById('msgText').innerHTML  += data["data"] + '\n';		
     },
+	heartAsk() {
+ 
+	}
 }

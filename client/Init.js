@@ -17,7 +17,8 @@
 		var obj = this;
 		//连接回调
 		ws.onopen  = function(evt) {
-            Req.heartBeat(obj);
+			// Req.heartBeat(obj);
+			Req.heartAsk(obj);
             //清除定时器
             clearInterval(obj.timer);
 			//获取用户状态         
@@ -82,7 +83,8 @@
         var func = Route[cmd][scmd];
         if(func) { 
 			try  {
-                eval("Resp."+func+"(data)");
+				Resp[func](data);
+                // eval("Resp."+func+"(data)") 估计原作者也是对js不懂;
             } catch(exception) {
                 document.getElementById('msgText').innerHTML  += func+':'+JSON.stringify(data) + '\n';
             }

@@ -20,9 +20,12 @@ class SubCmdSys {
 	const GET_SINGER_CARD_RESP = 12;	//获取翻倍单张卡牌响应，服务端使用
     const CHAT_HEART_ASK = 13;			//ws的心跳
 
+		
     const CHAT_MSG_REQ = 14;			//聊天消息请求，客户端使用
     const CHAT_MSG_RESP = 15;			//聊天消息响应，服务端使用
 
+    const HEART_ASK_MSG_RESP = 16;		// 心跳
+
 	//tcp协议子命令字，此处举例处理
 	const TCP_GET_HEART_ASK = 1	;		//处理心跳响应
-}                                                                                                      ;
+};

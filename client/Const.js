@@ -44,6 +44,7 @@ var SUB_CMD_SYS = {
         8 : 'cancelCard',
         10 : 'isDouble',
         12 : 'getSingerCard',
-		15 : 'chatMsg'
+		15 : 'chatMsg',
+        16 : 'heartAsk'
     },    
  }

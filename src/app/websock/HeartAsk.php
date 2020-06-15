@@ -17,7 +17,8 @@ class HeartAsk extends AStrategy {
     public function exec() {
         //原封不动发回去
         $data = Packet::packFormat('OK', 0, $this->_params['data']);
-        $data = Packet::packEncode($data, MainCmd::CMD_SYS, SubCmdSys::CHAT_MSG_RESP);
+//        $data = Packet::packEncode($data, MainCmd::CMD_SYS, SubCmdSys::CHAT_MSG_RESP);
+        $data = Packet::packEncode($data, MainCmd::CMD_SYS, SubCmdSys::HEART_ASK_MSG_RESP);
         return $data;
     }
 }
