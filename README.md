@@ -1,4 +1,4 @@
-# swoole-game-framework
+# swoole-multi-framework
 
 [![Latest Stable Version](https://img.shields.io/packagist/v/jxy918/swoole-game-framework.svg)](https://packagist.org/packages/jxy918/swoole-game-framework)
 [![Php Version](https://img.shields.io/badge/php-%3E=7.1-brightgreen.svg?maxAge=2592000)](https://secure.php.net/)
@@ -6,7 +6,6 @@
 
 * 基于Swoole扩展开游戏服务器框架
 * 基于 **[swoole-game](https://github.com/jxy918/swoole-game)** 框架怎么安装使用
-* 基于swoft框架实现的另一版本：**[swoft-game](https://github.com/jxy918/swoft-game)**
 * 想关注更多游戏开发可以关注swoft-ddz斗地主：**[swoft-ddz](https://github.com/jxy918/swoft-ddz)**
 
 ### 一，概述
@@ -87,28 +86,5 @@ php执行一下就可以看到结果：
 ```
 php tcp_client.php
 
-```
-
-* 6 ，H5游戏客户端代码由于公司限制，暂不开放， 但是提供了一个客户端交互测试工具，直接把client目录放入web服务器， 修改客服端配置文件配置websocket链接就能运行。
-
-
-### 六，示例图
-
-![游戏demo1](images/demo1.jpg)
-![游戏demo2](images/demo2.jpg)
-![游戏demo3](images/demo3.png)
-![游戏demo4](images/demo4.jpg)
-![客户端交互测试工具](images/demo5.png)    
-
-### 七，联系方式
-
-* qq：251413215, 加qq请输入验证消息：swoole-game
-
-### 八，备注
-
-* 根目录增加docker运行环境(Dockerfile)， 可以直接执行下面的命令，创建镜像php_swoole, 环境增加php-protobuf支持 
-
-```
-docker build -t php_swoole .
 ```
 

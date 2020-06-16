@@ -5,7 +5,7 @@ use Gameapp\Core\AStrategy;
 use Gameapp\Core\Packet;
 //use Game\Lib\JokerPoker;
 use Gameapp\Conf\MainCmd;
-use Gameapp\Conf\SubCmdSys;
+use Gameapp\Conf \SubCmdSys;
 
 /**
  *  获取卡牌信息
@@ -14,7 +14,7 @@ use Gameapp\Conf\SubCmdSys;
  class GetCard extends AStrategy {
     /**
      * 执行方法
-     */         
+     */
     public function exec() {		
 //        $data = JokerPoker::getFiveCard();
         $data = array(1,2);
